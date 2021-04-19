@@ -5,6 +5,11 @@ import covid
 app = Flask(__name__)
 
 
+@app.route('/')
+def index():
+    return "API is UP and running"
+
+
 @app.route('/covid/', methods=['GET', 'POST'])  # world-wide stats
 def global_results():
     try:
