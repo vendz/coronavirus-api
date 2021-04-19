@@ -5,7 +5,19 @@ import covid
 app = Flask(__name__)
 
 
-@app.route('/covid/<country>', methods=['GET'])
+@app.route('/covid/', methods=['GET', 'POST'])
+def global_results():
+    try:
+        return jsonify({"Total Cases": covid.global_info()[0].replace(",", ""),
+                        "Total Deaths": covid.global_info()[1].replace(",", ""),
+                        "Total Recovered": covid.global_info()[2].replace(",", ""),
+                        "Closed Cases": covid.global_info()[3].replace(",", ""),
+                        "active Cases": covid.global_info()[4]})
+    except requests.exceptions.RequestException as e:
+        return jsonify({"No Entries Found": str(e)})
+
+
+@app.route('/covid/<country>', methods=['GET', 'POST'])
 def findInfo(country):
     try:
         return jsonify({"Total Cases": covid.information(country)[0].replace(",", ""),
@@ -17,7 +29,7 @@ def findInfo(country):
         return jsonify({"No Entries Found": str(e)})
 
 
-@app.route('/covid/countries')
+@app.route('/covid/countries', methods=['GET', 'POST'])
 def all_countries():
     try:
         return jsonify({"All Countries": covid.all_countries()})
