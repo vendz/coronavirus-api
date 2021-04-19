@@ -21,7 +21,7 @@ python3 app.py
 ```sh
 http://127.0.0.1:5000/covid
 ```
-##### **Example:** http://127.0.0.1:5000/covid/
+##### **Example:** https://coronavirus-api-g7vm23y55-vendz1.vercel.app/
 ---
 ##### Usage for Detailed Country Results:
 
@@ -29,7 +29,7 @@ http://127.0.0.1:5000/covid
 http://127.0.0.1:5000/covid/india
 ```
 
-##### **Example:** http://127.0.0.1:5000/covid/india
+##### **Example:** https://coronavirus-api-g7vm23y55-vendz1.vercel.app/covid/india
 ---
 ##### List of all Supported countries:  
 
@@ -37,4 +37,4 @@ http://127.0.0.1:5000/covid/india
 http://127.0.0.1:5000/covid/countries
 ```
 
-##### **Example:** http://127.0.0.1:5000/covid/countries
+##### **Example:** https://coronavirus-api-g7vm23y55-vendz1.vercel.app/covid/countries
