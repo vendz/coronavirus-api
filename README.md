@@ -1,7 +1,21 @@
 # coronavirus-api 📊
 Show the Coronavirus Statistics in the requested region.
 
+### Installation
+```sh
+# Clone the repo
+git clone https://github.com/vendz/coronavirus-api.git
+cd coronavirus-api
 
+# Install requirements
+pip3 install -r requirements.txt
+
+# Finally run the app
+python3 app.py
+```
+---
+
+### Usage
 ##### Usage for Global Results:  
 
 ```sh
