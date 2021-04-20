@@ -16,8 +16,8 @@ def global_results():
         return jsonify({"Total Cases": covid.global_info()[0],
                         "Total Deaths": covid.global_info()[1],
                         "Total Recovered": covid.global_info()[2],
-                        "Closed Cases": covid.global_info()[3],
-                        "active Cases": covid.global_info()[4]})
+                        "active Cases": covid.global_info()[3],
+                        "Closed Cases": covid.global_info()[4]})
     except requests.exceptions.RequestException as e:
         return jsonify({"No Entries Found": str(e)})
 
